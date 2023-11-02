@@ -1,0 +1,39 @@
+.hs-container {
+  margin-left: 150px;
+  margin-bottom: 150px;
+}
+
+.hs-description {
+  width: 500px;
+  margin-bottom: 80px;
+}
+
+.hs-title {
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 42.969px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 116.364% */
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.hs-main-container {
+  display: flex;
+  height: 300px;
+  overflow: hidden;
+}
+
+.hs-video {
+    width: 600px;
+}
+
+.panel {
+    height: 300px;
+}
+
+.panel img{
+  width: 600px;
+  height: 300px;
+}

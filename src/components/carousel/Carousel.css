@@ -1,0 +1,98 @@
+.carousel-container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  height: 700px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  align-items: flex-end;
+  height: 600px;
+}
+
+.carousel-image {
+  margin: 0 10px;
+  transition: width 0.5s;
+}
+
+.carousel-image img {
+  width: 250px;
+  height: 250px;
+  transition: 0.5s;
+}
+
+.carousel-image.selected img {
+  width: 600px;
+  height: 600px;
+  transition: 0.5s;
+}
+
+.carousel-button {
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 250px;
+  background-color: #D4AF37;
+}
+
+.carousel-button.left {
+  left: 25px;
+}
+
+.carousel-button.right {
+  right: 25px;
+}
+
+.car-description {
+  position: absolute;
+  top: 30px;
+  left: 850px;
+}
+
+.car-title {
+  font-size: 25.547px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 39px; /* 152.661% */
+  margin-bottom: 12px;
+}
+
+.car-sub-title {
+  margin-bottom: 24px;
+}
+
+thead {
+  color: rgba(16, 24, 33, 0.5);
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 13px; /* 130% */
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+tbody {
+  color: #000;
+  font-family: Inter;
+  font-size: 17.969px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px; /* 194.783% */
+}
+
+td {
+  padding-right: 48px;
+}
+
+table {
+  margin-bottom: 36px;
+}

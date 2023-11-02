@@ -1,0 +1,21 @@
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+
+.bg-button {
+    border-radius: 56px;
+    width: 180px;
+    height: 46px;
+}
+
+.button.outlined {
+    border: 1px white solid;
+}
+
+.button.fillout {
+    background-color: #D4AF37;
+}
