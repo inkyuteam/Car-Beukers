@@ -6,6 +6,7 @@ export const Home = () => {
   return (
     <>
       <div className="home">
+        <div className="video-effect"></div>
         <video loop autoPlay muted className="video">
           <source src={require("../../assets/top.mp4")} type="video/ogg" />
         </video>
