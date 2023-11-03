@@ -18,16 +18,22 @@
   transition: width 0.5s;
 }
 
+.carousel-image .animation-img {
+  transition: 0.5s;
+}
+
 .carousel-image img {
   width: 250px;
   height: 250px;
+}
+
+.carousel-image.selected .animation-img {
   transition: 0.5s;
 }
 
 .carousel-image.selected img {
   width: 600px;
   height: 600px;
-  transition: 0.5s;
 }
 
 .carousel-button {

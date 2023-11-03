@@ -15,7 +15,7 @@ export const HorizontalScroll = () => {
     let ctx = gsap.context(() => {
       let panels = gsap.utils.toArray(".panel");
       gsap.to(panels, {
-        xPercent: -50 * (panels.length - 1),
+        xPercent: -80 * (panels.length - 1),
         ease: "none",
         scrollTrigger: {
           trigger: component.current,
@@ -41,6 +41,17 @@ export const HorizontalScroll = () => {
           </div>
         </div>
         <div ref={slider} className="hs-main-container">
+          <div className="panel">
+            <video loop autoPlay muted className="hs-video">
+              <source src={require("../../assets/top.mp4")} type="video/ogg" />
+            </video>
+          </div>
+          <div className="panel">
+            <img src={car1} alt="" />
+          </div>
+          <div className="panel">
+            <img src={car2} alt="" />
+          </div>
           <div className="panel">
             <video loop autoPlay muted className="hs-video">
               <source src={require("../../assets/top.mp4")} type="video/ogg" />
