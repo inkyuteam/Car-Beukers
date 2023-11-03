@@ -40,6 +40,7 @@
   position: absolute;
   top: 250px;
   background-color: #D4AF37;
+  z-index: 1;
 }
 
 .carousel-button.left {
@@ -70,7 +71,7 @@
 
 thead {
   color: rgba(16, 24, 33, 0.5);
-  font-family: Inter;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
@@ -82,7 +83,7 @@ thead {
 
 tbody {
   color: #000;
-  font-family: Inter;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 17.969px;
   font-style: normal;
   font-weight: 400;

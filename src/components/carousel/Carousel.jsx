@@ -7,8 +7,6 @@ import car3 from "../../assets/cars/car3.png";
 
 import { Button } from "../common/Button/Button";
 
-// let flag = false;
-
 export const Carousel = () => {
   const carRef = useRef();
   const [images, setImages] = useState([]);
@@ -27,11 +25,7 @@ export const Carousel = () => {
   };
 
   const handleAnimationComplete = () => {
-    // const styles = getComputedStyle(carRef.current);
-    // const tx = parseInt(styles.transform.split(",")[4]);
-    // carRef.current.style.transform = "translateX(-490px)";
-    // flag = true;
-    // setSelectedImageIndex(2);
+    
   };
 
   useEffect(() => {
