@@ -89,6 +89,12 @@
   line-height: 28px; /* 141.102% */
 }
 
+@media only screen and (max-width: 1560px) {
+  .home .footer .title {
+    font-size: 138.257px; 
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   .home .footer .title {
     display: none;
