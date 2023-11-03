@@ -15,7 +15,7 @@ export const HorizontalScroll = () => {
     let ctx = gsap.context(() => {
       let panels = gsap.utils.toArray(".panel");
       gsap.to(panels, {
-        xPercent: -80 * (panels.length - 1),
+        xPercent: -100 * (panels.length - 1),
         ease: "none",
         scrollTrigger: {
           trigger: component.current,

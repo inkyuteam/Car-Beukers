@@ -35,3 +35,27 @@
     top: 80px;
     left: 80px;
 }
+
+@media only screen and (max-width: 768px) {
+    .auto-background {
+        display: none;
+    }
+    .auto-main {
+        height: 100px;
+    }
+    .auto-container {
+        margin-top: 50px;
+        height: 150px;
+    }
+  }
+  
+  @media only screen and (max-width: 526px) {
+    .auto-buttons {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .auto-container {
+        height: 200px;
+    }
+  }

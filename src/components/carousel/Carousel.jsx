@@ -79,7 +79,7 @@ export const Carousel = React.memo(
         onComplete: handleAnimationComplete,
       });
     }, [selectedImageIndex]);
-    console.log(12345);
+
     return (
       <div className="carousel-container">
         <div className="carousel" ref={carRef}>

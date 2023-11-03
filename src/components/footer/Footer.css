@@ -1,64 +1,100 @@
 .page-footer {
-    width: 100%;
-    color: white;
+  width: 100%;
+  color: white;
 }
 
 .page-footer .track {
-    background-color: #151515;
-    padding-left: 120px;
-    padding-top: 64px;
-    padding-bottom: 64px;
+  background-color: #151515;
+  padding-left: 120px;
+  padding-top: 64px;
+  padding-bottom: 64px;
 }
 
 .page-footer .track .content {
-    display: flex;
-    width: 50%;
-    gap: 48px;
+  display: flex;
+  width: 50%;
+  gap: 48px;
 }
 
 .page-footer .track .content .text {
-    width: 100%;
+  width: 100%;
 }
 
 .page-footer .track .content .input {
-    width: 100%;
-    display: flex;
-    align-items: flex-end;
-    margin-bottom: 4px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 4px;
 }
 
-.page-footer .track .content .input input{
-    width: 100%;
-    height: 36px;
-    background: none;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid white;
-    color: white;
-    padding-right: 36px;
+.page-footer .track .content .input input {
+  width: 100%;
+  height: 36px;
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid white;
+  color: white;
+  padding-right: 36px;
 }
 
 .page-footer .track .content .input input::placeholder {
-    color: white;
+  color: white;
 }
 
 .page-footer .track .content .input img {
-    margin-left: -24px;
-    margin-bottom: 7px;
+  margin-left: -24px;
+  margin-bottom: 7px;
 }
 
 .page-footer .bottom-content {
-    background-color: #212121;
+  background-color: #212121;
 }
 
 .last-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px;
 }
 
 .reheader {
-    padding-top: 80px;
-    padding-left: 20%;
+  padding-top: 80px;
+  padding-left: 20%;
+}
+
+.bottom-leak-menu {
+    display: none;
+}
+
+@media only screen and (max-width: 956px) {
+    .bottom-leak-menu {
+        display: block;
+    }
+    .bottom-full-menu {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+  .page-footer .track .content {
+    display: flex;
+    width: 80%;
+    gap: 48px;
+  }
+  .last-content {
+    display: block;
+  }
+  .bottom-leak-menu {
+    margin-bottom: 48px;
+  }
+}
+
+@media only screen and (max-width: 526px) {
+  .page-footer .track .content {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 24px;
+  }
 }

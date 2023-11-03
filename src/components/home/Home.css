@@ -1,77 +1,119 @@
 .video {
-    width: 100%;
+  width: 100%;
 }
 
 .home {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .home .footer {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    left: 10%;
-    right: 3%;
-    bottom: 88px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  left: 10%;
+  right: 3%;
+  bottom: 88px;
 }
 
 .home .footer .title {
-    color: rgba(255, 255, 255, 0.83);
-    font-size: 188.257px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 189px;
-    letter-spacing: -12.6px;
+  color: rgba(255, 255, 255, 0.83);
+  font-size: 188.257px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 189px;
+  letter-spacing: -12.6px;
 }
 
 .home .footer .sub-content {
-    display: flex;
-    flex-direction: column;
-    gap: 76px;
+  display: flex;
+  flex-direction: column;
+  gap: 76px;
 }
 
 .home .footer .sub-content .sub-title {
-    color: #FFF;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 44.5px;
-    letter-spacing: -2.52px;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 44.5px;
+  letter-spacing: -2.52px;
 }
 
 .home .footer .sub-content .button-group {
-    display: flex;
-    gap: 8px;
+  display: flex;
+  gap: 8px;
 }
 
 .home-plus {
-    margin-top: -10px;
-    width: 100%;
-    height: 344px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 190px;
-    background-color: #D4AF37;
+  margin-top: -10px;
+  width: 100%;
+  height: 344px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 190px;
+  background-color: #d4af37;
 }
 
 .home-plus div {
-    width: 30%;
-    color: #FFF;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: 400;
+  width: 30%;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
 }
 
 .home-plus div:first-child {
-    font-size: 43.656px;
-    line-height: 52px; /* 119.112% */
+  font-size: 43.656px;
+  line-height: 52px; /* 119.112% */
 }
 
 .home-plus div:last-child {
-    font-size: 19.844px;
-    line-height: 28px; /* 141.102% */
+  font-size: 19.844px;
+  line-height: 28px; /* 141.102% */
+}
+
+@media only screen and (max-width: 1200px) {
+  .home .footer .title {
+    display: none;
+  }
+  .home .footer .sub-content .sub-title {
+    display: none;
+  }
+  .home .footer{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 756px) {
+  .home-plus {
+    display: block;
+    overflow: hidden;
+    padding: 48px;
+    height: 320px;
+    box-sizing: border-box;
+  }
+
+  .home-plus div {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 526px) {
+  .home-plus {
+    height: 440px;
+  }
+  .home .footer {
+    left: 10px;
+  }
+}
+
+@media only screen and (max-width: 450px) { 
+  .home-plus {
+    height: 540px;
+  }
 }

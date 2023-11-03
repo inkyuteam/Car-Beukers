@@ -1,5 +1,6 @@
 import logo from "../../../assets/logo.svg"
 import "./Header.css"
+import threeLine from "../../../assets/threeLine.png";
 
 export const Header = ({menus}) => {
   return (
@@ -11,6 +12,9 @@ export const Header = ({menus}) => {
         {menus.map((item, index) => {
           return <div key={index} className="item">{item}</div>;
         })}
+      </div>
+      <div className="leak-menu">
+        <img src={threeLine} alt="" />
       </div>
     </div>
   );

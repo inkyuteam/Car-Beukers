@@ -3,7 +3,7 @@ import "./MenuBar.css";
 
 export const MenuBar = ({ labels, icons, size }) => {
   return (
-    <div className="menubar">
+    <div className={`menubar-${size}`}>
       {(labels || icons).map((item, index) => {
         return (
           <div key={index} className="item">

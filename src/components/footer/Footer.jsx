@@ -3,10 +3,11 @@ import "./Footer.css";
 import right from "../../assets/arrow-right.svg";
 import { MenuBar } from "../common/Menu/MenuBar";
 import arrow from "../../assets/arrow-top-right.svg";
-import instagram from "../../assets/social-icons/instagram.svg"
-import linkedin from "../../assets/social-icons/linkedin.svg"
-import twitter from "../../assets/social-icons/twitter.svg"
-import youtube from "../../assets/social-icons/youtube.svg"
+import instagram from "../../assets/social-icons/instagram.svg";
+import linkedin from "../../assets/social-icons/linkedin.svg";
+import twitter from "../../assets/social-icons/twitter.svg";
+import youtube from "../../assets/social-icons/youtube.svg";
+import threeLine from "../../assets/threeLine.png"
 
 export const Footer = ({ menus }) => {
   return (
@@ -32,22 +33,28 @@ export const Footer = ({ menus }) => {
           />
         </div>
         <div className="last-content">
-          <MenuBar
-            labels={[
-              "© 2023 Car Beukers. All Rights Reserved.",
-              "Terms",
-              "Privacy",
-              "Cookies",
-              "Legal",
-              "Recalls",
-              "Made by Grandsolution",
-            ]}
-            size="sm"
-          />
-          <MenuBar
-            icons={[instagram, linkedin, twitter, youtube]}
-            size="md"
-          />
+          <div className="bottom-full-menu">
+            <MenuBar
+              labels={[
+                "© 2023 Car Beukers. All Rights Reserved.",
+                "Terms",
+                "Privacy",
+                "Cookies",
+                "Legal",
+                "Recalls",
+                "Made by Grandsolution",
+              ]}
+              size="sm"
+            />
+          </div>
+          <div className="bottom-leak-menu">
+            <MenuBar
+              labels={["© 2023 Car Beukers. All Rights Reserved.", ""]}
+              icons={["", threeLine]}
+              size="sm"
+            />
+          </div>
+          <MenuBar icons={[instagram, linkedin, twitter, youtube]} size="md" />
         </div>
       </div>
     </div>

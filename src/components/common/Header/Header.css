@@ -1,31 +1,56 @@
 .header {
-    position: absolute;
-    z-index: 1;
-    display: flex;
-    width: 100%;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  width: 100%;
 }
 
 .header .logo {
-    margin-left: 10%;
-    margin-top: 3%;
+  margin-left: 10%;
+  margin-top: 3%;
 }
 
 .header .menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2%;
-    width: 100%;
-    gap: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2%;
+  width: 100%;
+  gap: 64px;
 }
 
 .header .menu .item {
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 1px;
-    cursor: pointer;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .logo {
+    display: none;
+  }
+  .menu {
+    margin-top: 80px;
+  }
+}
+
+.leak-menu {
+  display: none;
+}
+
+@media only screen and (max-width: 526px) {
+  .header .menu {
+    display: none;
+  }
+  .leak-menu {
+    display: block;
+    position: absolute;
+    right: 24px;
+    top: 24px;
+  }
 }

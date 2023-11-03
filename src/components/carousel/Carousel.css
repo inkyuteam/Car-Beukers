@@ -103,3 +103,48 @@ td {
 table {
   margin-bottom: 36px;
 }
+
+@media only screen and (max-width: 1200px) {
+  .carousel-container {
+    height: 900px;
+  }
+  .car-description {
+    position: relative;
+    top: 50px;
+    left: 100px;
+  }  
+}
+
+@media only screen and (max-width: 768px) {
+  .logo {
+    display: none;
+  }
+  .menu {
+    margin-top: 80px;
+  }
+
+  .carousel-image.selected img {
+    width: 400px;
+    height: 400px;
+  }
+
+  .carousel-container {
+    margin-top: 0px;
+  }
+}
+
+@media only screen and (max-width: 526px) {
+  .carousel-button.left {
+    left: 0px;
+  }
+  
+  .carousel-button.right {
+    left: 45px;
+  }
+}
+
+@media only screen and (max-width: 412px) {
+  .carousel-container {
+    height: 950px;
+  }
+}

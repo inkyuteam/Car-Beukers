@@ -42,3 +42,9 @@
   width: 600px;
   height: 300px;
 }
+
+@media only screen and (max-width: 756px) {
+  .hs-container {
+    margin-left: 50px;
+  }
+}
