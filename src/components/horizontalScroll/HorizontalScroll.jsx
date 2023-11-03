@@ -30,31 +30,33 @@ export const HorizontalScroll = () => {
   });
 
   return (
-    <div className="hs-container" ref={component}>
-      <div className="hs-description">
-        <div className="hs-title">Het hele pakket.</div>
-        <div className="hs-text">
-          Bij ons autobedrijf geen gedoe met pakketten of extra kosten. Onze
-          prijzen zijn all-in, dus je koopt een auto en kunt direct de weg op.
-          Eenvoudig, transparant en zonder verrassingen!
+    <div className="hs-view">
+      <div className="hs-container" ref={component}>
+        <div className="hs-description">
+          <div className="hs-title">Het hele pakket.</div>
+          <div className="hs-text">
+            Bij ons autobedrijf geen gedoe met pakketten of extra kosten. Onze
+            prijzen zijn all-in, dus je koopt een auto en kunt direct de weg op.
+            Eenvoudig, transparant en zonder verrassingen!
+          </div>
         </div>
-      </div>
-      <div ref={slider} className="hs-main-container">
-        <div className="panel">
-          <video loop autoPlay muted className="hs-video">
-            <source src={require("../../assets/top.mp4")} type="video/ogg" />
-          </video>
-        </div>
-        <div className="panel">
+        <div ref={slider} className="hs-main-container">
+          <div className="panel">
+            <video loop autoPlay muted className="hs-video">
+              <source src={require("../../assets/top.mp4")} type="video/ogg" />
+            </video>
+          </div>
+          <div className="panel">
             <img src={car1} alt="" />
-        </div>
-        <div className="panel">
+          </div>
+          <div className="panel">
             <img src={car2} alt="" />
-        </div>
-        <div className="panel">
-          <video loop autoPlay muted className="hs-video">
-            <source src={require("../../assets/top.mp4")} type="video/ogg" />
-          </video>
+          </div>
+          <div className="panel">
+            <video loop autoPlay muted className="hs-video">
+              <source src={require("../../assets/top.mp4")} type="video/ogg" />
+            </video>
+          </div>
         </div>
       </div>
     </div>
