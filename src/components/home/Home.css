@@ -37,6 +37,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 189px;
+  font-family: Inter;
   letter-spacing: -12.6px;
 }
 
@@ -48,7 +49,7 @@
 
 .home .footer .sub-content .sub-title {
   color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica Neue;
   font-size: 36px;
   font-style: normal;
   font-weight: 400;
@@ -74,7 +75,7 @@
 .home-plus div {
   width: 30%;
   color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica Neue;
   font-style: normal;
   font-weight: 400;
 }

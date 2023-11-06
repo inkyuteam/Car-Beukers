@@ -7,78 +7,61 @@ import car3 from "../../assets/cars/car3.png";
 
 import { Button } from "../common/Button/Button";
 
+const sources = [car1, car2, car3];
+let images = [];
+while(images.length < 30) {
+  images = [...images, ...sources]
+}
+
 export const Carousel = React.memo(
   () => {
     const carRef = useRef();
-    const [images, setImages] = useState([]);
-    const [selectedImageIndex, setSelectedImageIndex] = useState(2);
-    const [arrowButtonFlag, setArrowButtonFlag] = useState(true);
+    const [tarImageIndex, setTarImageIndex] = useState(0);
+    const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
     const goToPrevious = () => {
-      if (!arrowButtonFlag) {
-        return;
-      }
-      setArrowButtonFlag(false);
-      setSelectedImageIndex((prevIndex) =>
+      setTarImageIndex((prevIndex) =>
         prevIndex === 0 ? images.length - 1 : prevIndex - 1
       );
-      setTimeout(() => {
-        setArrowButtonFlag(true);
-      }, 500);
     };
 
     const goToNext = () => {
-      if (!arrowButtonFlag) {
-        return;
-      }
-      setArrowButtonFlag(false);
-      setSelectedImageIndex((prevIndex) =>
+      setTarImageIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-      setTimeout(() => {
-        setArrowButtonFlag(true);
-      }, 500);
     };
-
-    const handleAnimationComplete = () => {
-      if (images.length >= 1) {
-        if (selectedImageIndex > 2) {
-          const first = images.shift();
-          setImages([...images, first]);
-        } else {
-          const last = images.pop();
-          setImages([last, ...images]);
-        }
-        setSelectedImageIndex(2);
-        setTimeout(()=>{gsap.to(".carousel", {
-          x: -440,
-          width: carRef.current.offsetWidth,
-          duration: 0.0,
-        })}, 0);
-      }
-    };
-
-    useEffect(() => {
-      setImages([car1, car2, car3, car1, car2, car3, car1, car2, car3]);
-      gsap.to(".carousel", {
-        x: -270 * selectedImageIndex + 100,
-        width: carRef.current.offsetWidth + 270 * selectedImageIndex,
-        duration: 0.5,
-        onComplete: handleAnimationComplete,
-      });
-    }, []);
 
     useLayoutEffect(() => {
-      if (selectedImageIndex === 2) {
-        return;
+      const timer = setTimeout(() => {
+        if (tarImageIndex != selectedImageIndex)
+          setSelectedImageIndex((prevIndex) =>
+            prevIndex < tarImageIndex ? prevIndex + 1 : prevIndex - 1
+          );
+      }, 300);
+
+      return () => {
+        clearTimeout(timer);
+      };
+    }, [tarImageIndex, selectedImageIndex]);
+
+    const getImageStyle = (idx) => {
+      let willHide = false;
+      const imageCount = images.length;
+      let delta = idx - selectedImageIndex;
+
+      if (delta > 8) {
+        delta -= imageCount;
       }
-      gsap.to(".carousel", {
-        x: -270 * selectedImageIndex + 100,
-        width: carRef.current.offsetWidth,
-        duration: 0.5,
-        onComplete: handleAnimationComplete,
-      });
-    }, [selectedImageIndex]);
+      if (delta < -6) {
+        delta += imageCount;
+      }
+
+      if (delta < -6 || delta > 6) willHide = true;
+      
+      let nextLeft = 320 * delta + (delta > 0 ? 400 : 100);
+
+      return { left: `${nextLeft}px`, opacity: willHide ? 0 : 1 };
+    };
 
     return (
       <div className="carousel-container">
@@ -89,15 +72,12 @@ export const Carousel = React.memo(
               className={`carousel-image ${
                 index === selectedImageIndex ? "selected" : ""
               }`}
+              onClick={()=>{setTarImageIndex(index)}}
+              style={getImageStyle(index)}
             >
               <img
                 src={image}
-                alt=""
-                className={`${
-                  selectedImageIndex !== 2
-                    ? "animation-img"
-                    : "no-animation-img"
-                }`}
+                alt={`image-${index}`}
               />
             </div>
           ))}
@@ -114,7 +94,7 @@ export const Carousel = React.memo(
             Roadster 63 4MATIC+ | Burmester | Airscarf | Premium Leder |
           </div>
           <div>
-            <table>
+            <table className="car-details">
               <thead>
                 <tr>
                   <td>Jaar</td>

@@ -1,7 +1,7 @@
 .carousel-container {
   margin-top: 100px;
   margin-bottom: 100px;
-  height: 700px;
+  height: 800px;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -11,24 +11,24 @@
   display: flex;
   align-items: flex-end;
   height: 600px;
+  position: relative;
 }
 
 .carousel-image {
   margin: 0 10px;
-  transition: width 0.5s;
+  position: absolute;
+  transition: left 0.5s ease-out;
 }
 
-.carousel-image .animation-img {
-  transition: 0.5s;
+.carousel-image:hover{
+  cursor: pointer;
 }
 
 .carousel-image img {
-  width: 250px;
-  height: 250px;
-}
-
-.carousel-image.selected .animation-img {
-  transition: 0.5s;
+  width: 300px;
+  height: 300px;
+  opacity: inherit;
+  transition: width 0.5s ease-out,height 0.5s ease-out;
 }
 
 .carousel-image.selected img {
@@ -64,20 +64,26 @@
 }
 
 .car-title {
-  font-size: 25.547px;
+  font-size: 25.5px;
+  font-family: Roboto;
   font-style: normal;
   font-weight: 400;
   line-height: 39px; /* 152.661% */
-  margin-bottom: 12px;
 }
 
 .car-sub-title {
+  font-family: Roboto;
+  font-size: 16px;
   margin-bottom: 24px;
 }
 
-thead {
+.car-details{
+  font-family: Impact;
+  margin-bottom: 36px;
+}
+
+.car-details thead {
   color: rgba(16, 24, 33, 0.5);
-  font-family: Inter;
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
@@ -87,26 +93,20 @@ thead {
   text-align: left;
 }
 
-tbody {
+.car-details tbody td{
   color: #000;
-  font-family: Inter;
-  font-size: 17.969px;
-  font-style: normal;
   font-weight: 400;
-  line-height: 35px; /* 194.783% */
+  line-height: 35px; 
+  font-size: 18px;
 }
 
-td {
+.car-details td {
   padding-right: 48px;
-}
-
-table {
-  margin-bottom: 36px;
 }
 
 @media only screen and (max-width: 1200px) {
   .carousel-container {
-    height: 900px;
+    height: 800px;
   }
   .car-description {
     position: relative;
@@ -147,4 +147,25 @@ table {
   .carousel-container {
     height: 950px;
   }
+}
+
+
+
+.scroll-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow-x: scroll;
+}
+
+.scroll-item {
+  width: 300px;
+  height: 200px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.scroll-item.selected {
+  transform: scale(1.5);
 }
